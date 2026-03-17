@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["...", "pkg-config", "libxcb", "libxext", "libxrender"]
+
+[phases.install]
+cmds = [
+  "pip uninstall -y opencv-python || true",
+  "pip install --no-cache-dir -r requirements.txt"
+]
