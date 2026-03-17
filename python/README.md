@@ -3,9 +3,8 @@ title: Coin Detection AI
 emoji: 🪙
 colorFrom: blue
 colorTo: purple
-sdk: fastapi
-sdk_version: "0.110.0"
-app_file: app.py
+sdk: gradio
+app_file: simple_app.py
 pinned: false
 license: mit
 ---
