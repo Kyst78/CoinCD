@@ -10,17 +10,20 @@ import os
 
 app = FastAPI()
 
-allowed_origins_raw = os.getenv("ALLOWED_ORIGIN", "http://localhost:3000")
-allowed_origins = [o.strip() for o in allowed_origins_raw.split(",")]
+# HF Spaces ไม่ต้องใช้ CORS middleware ถ้าเรียกจากภายนอก
+if os.getenv("HF_SPACE") != "true":
+    allowed_origins_raw = os.getenv("ALLOWED_ORIGIN", "http://localhost:3000,https://coin-cd-xi.vercel.app")
+    allowed_origins = [o.strip() for o in allowed_origins_raw.split(",")]
+    
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=allowed_origins,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=allowed_origins,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-model_path = os.getenv("MODEL_PATH", "best.pt")
+# โหลด model ตอนเริ่มต้น
+model_path = "best.pt"
 model = YOLO(model_path)
 
 COIN_VALUES = {
