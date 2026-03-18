@@ -1,4 +1,4 @@
-# 🪙 CoinCD - Coin Detection App
+# 🪙 CoinCD - TH Coin Detection App
 
 AI-powered coin detection application using YOLOv8 and FastAPI.
 
