@@ -4,12 +4,12 @@ AI-powered coin detection application using YOLOv8 and FastAPI.
 
 ## Features
 
-- 🤖 **AI Detection**: Detect coins in images using YOLOv8
-- 💰 **Value Calculation**: Automatically calculate total coin value
-- 📊 **History Tracking**: Track and manage detection history
-- 📈 **Report Generation**: Generate reports from selected history
-- 🔐 **Authentication**: Email/password and GitHub OAuth login
-- 🗑️ **Delete History**: Remove unwanted detection records
+- **AI Detection**: Detect coins in images using YOLOv8
+- **Value Calculation**: Automatically calculate total coin value
+- **History Tracking**: Track and manage detection history
+- **Report Generation**: Generate reports from selected history
+- **Authentication**: Email/password and GitHub OAuth login
+- **Delete History**: Remove unwanted detection records
 
 ## Architecture
 
