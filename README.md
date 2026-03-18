@@ -27,8 +27,8 @@ AI-powered coin detection application using YOLOv8 and FastAPI.
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/Kyst78/CoinCD.git
-cd CoinCD
+git clone https://github.com/Kyst78/CountCoin.git
+cd CountCoin
 pnpm install
 ```
 
